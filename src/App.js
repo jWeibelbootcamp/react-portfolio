@@ -1,10 +1,10 @@
 import React from 'react';
-// import CSS here
-import Website from './components/Website';
+import './App.css';
+import Main from './components/main';
 
 function App() {
     return (
-        <Website />
+        <Main />
     );
 };
 
