@@ -1,5 +1,5 @@
-import React from 'react';
-import Navbar from './components/Navbar';
+import React, { useState } from 'react';
+import NavTabs from './components/Navbar';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Resume from './components/Resume';
@@ -8,13 +8,31 @@ import Contact from './components/Contact';
 import './App.css';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('About');
+  const renderPage = () => {
+    if (currentPage === 'About') {
+      return <About />;
+    }
+    if (currentPage === 'Projects') {
+      return <Projects />;
+    }
+    if (currentPage === 'Skills') {
+      return <Skills />;
+    }
+    if (currentPage === 'Resume') {
+      return <Resume />;
+    }
+    if (currentPage === 'Contact') {
+      return <Contact />;
+    }
+  };
+
+  const handlePageChange = (page) => setCurrentPage(page);
+
   return (
-    <div className="App">
-      <Navbar />
-      <About />
-      <Contact />
-      <Projects />
-      <Skills />
+    <div>
+      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+      {renderPage()}
     </div>
   );
 };
