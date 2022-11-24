@@ -4,7 +4,7 @@ function About () {
     return (
         <div>
             <h1>
-                About Me
+                time to make this look decent
             </h1>
         </div>
     );
