@@ -4,6 +4,7 @@ import Projects from './components/Projects';
 import Resume from './components/Resume';
 import About from './components/About';
 import Contact from './components/Contact';
+import anime from 'animejs/lib/anime.es.js';
 import './App.css';
 
 function App() {
