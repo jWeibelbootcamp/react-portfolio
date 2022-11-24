@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import NavTabs from './components/Navbar';
 import Projects from './components/Projects';
-import Skills from './components/Skills';
 import Resume from './components/Resume';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -15,9 +14,6 @@ function App() {
     }
     if (currentPage === 'Projects') {
       return <Projects />;
-    }
-    if (currentPage === 'Skills') {
-      return <Skills />;
     }
     if (currentPage === 'Resume') {
       return <Resume />;
